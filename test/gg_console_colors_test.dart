@@ -4,36 +4,41 @@
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
 
-import 'package:args/command_runner.dart';
+import 'package:gg_capture_print/gg_capture_print.dart';
 import 'package:gg_console_colors/gg_console_colors.dart';
 import 'package:test/test.dart';
 
 void main() {
-  final messages = <String>[];
-
   group('GgConsoleColors()', () {
     // #########################################################################
-    group('exec()', () {
-      test('description of the test ', () async {
-        final ggConsoleColors =
-            GgConsoleColors(param: 'foo', log: (msg) => messages.add(msg));
-
-        await ggConsoleColors.exec();
-      });
-    });
-
-    // #########################################################################
-    group('ggConsoleColors', () {
-      test('should allow to run the code from command line', () async {
-        final ggConsoleColors =
-            GgConsoleColorsCmd(log: (msg) => messages.add(msg));
-
-        final CommandRunner<void> runner = CommandRunner<void>(
-          'ggConsoleColors',
-          'Description goes here.',
-        )..addCommand(ggConsoleColors);
-
-        await runner.run(['ggConsoleColors', '--param', 'foo']);
+    group('printExample()', () {
+      test('should print a list of example colors', () async {
+        final messages = <String>[];
+        capturePrint(
+          log: messages.add,
+          code: () {
+            printExample();
+            expect(messages, [
+              'This is a ${reset}reset ${reset}text. ',
+              'This is a ${black}black ${reset}text. ',
+              'This is a ${red}red ${reset}text. ',
+              'This is a ${green}green ${reset}text. ',
+              'This is a ${yellow}yellow ${reset}text. ',
+              'This is a ${blue}blue ${reset}text. ',
+              'This is a ${magenta}magenta ${reset}text. ',
+              'This is a ${cyan}cyan ${reset}text. ',
+              'This is a ${white}white ${reset}text. ',
+              'This is a ${brightBlack}brightBlack ${reset}text. ',
+              'This is a ${brightRed}brightRed ${reset}text. ',
+              'This is a ${brightGreen}brightGreen ${reset}text. ',
+              'This is a ${brightYellow}brightYellow ${reset}text. ',
+              'This is a ${brightBlue}brightBlue ${reset}text. ',
+              'This is a ${brightMagenta}brightMagenta ${reset}text. ',
+              'This is a ${brightCyan}brightCyan ${reset}text. ',
+              'This is a ${brightWhite}brightWhite ${reset}text. ',
+            ]);
+          },
+        );
       });
     });
   });

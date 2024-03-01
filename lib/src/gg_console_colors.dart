@@ -4,69 +4,74 @@
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
 
-// #############################################################################
-import 'package:args/command_runner.dart';
+/// Reset console color
+const String reset = '\x1B[0m';
 
-/// Gg Console Colors
-class GgConsoleColors {
-  /// Constructor
-  GgConsoleColors({
-    required this.param,
-    required this.log,
-  });
+/// Black console color
+const String black = '\x1B[30m';
 
-  /// The param to work with
-  final String param;
+/// Red console color
+const String red = '\x1B[31m';
 
-  /// The log function
-  final void Function(String msg) log;
+/// Green console color
+const String green = '\x1B[32m';
 
-  /// The function to be executed
-  Future<void> exec() async {
-    log('Executing ggConsoleColors with param $param');
-  }
-}
+/// Yellow console color
+const String yellow = '\x1B[33m';
 
-// #############################################################################
-/// The command line interface for GgConsoleColors
-class GgConsoleColorsCmd extends Command<dynamic> {
-  /// Constructor
-  GgConsoleColorsCmd({required this.log}) {
-    _addArgs();
-  }
+/// Blue console color
+const String blue = '\x1B[34m';
 
-  /// The log function
-  final void Function(String message) log;
+/// Magenta console color
+const String magenta = '\x1B[35m';
 
-  // ...........................................................................
-  @override
-  final name = 'ggConsoleColors';
-  @override
-  final description = 'Add your description here.';
+/// Cyan console color
+const String cyan = '\x1B[36m';
 
-  // ...........................................................................
-  @override
-  Future<void> run() async {
-    var param = argResults?['param'] as String;
-    GgConsoleColors(
-      param: param,
-      log: log,
-    );
+/// White console color
+const String white = '\x1B[37m';
 
-    await GgConsoleColors(
-      param: param,
-      log: log,
-    ).exec();
-  }
+/// BrightBlack console color
+const String brightBlack = '\x1B[90m';
 
-  // ...........................................................................
-  void _addArgs() {
-    argParser.addOption(
-      'param',
-      abbr: 'p',
-      help: 'The param to work with',
-      valueHelp: 'param',
-      mandatory: true,
-    );
-  }
+/// BrightRed console color
+const String brightRed = '\x1B[91m';
+
+/// BrightGreen console color
+const String brightGreen = '\x1B[92m';
+
+/// BrightYellow console color
+const String brightYellow = '\x1B[93m';
+
+/// BrightBlue console color
+const String brightBlue = '\x1B[94m';
+
+/// BrightMagenta console color
+const String brightMagenta = '\x1B[95m';
+
+/// BrightCyan console color
+const String brightCyan = '\x1B[96m';
+
+/// BrightWhite console color
+const String brightWhite = '\x1B[97m';
+
+/// Prints an example of the console colors
+void printExample() {
+  print('This is a ${reset}reset ${reset}text. ');
+  print('This is a ${black}black ${reset}text. ');
+  print('This is a ${red}red ${reset}text. ');
+  print('This is a ${green}green ${reset}text. ');
+  print('This is a ${yellow}yellow ${reset}text. ');
+  print('This is a ${blue}blue ${reset}text. ');
+  print('This is a ${magenta}magenta ${reset}text. ');
+  print('This is a ${cyan}cyan ${reset}text. ');
+  print('This is a ${white}white ${reset}text. ');
+  print('This is a ${brightBlack}brightBlack ${reset}text. ');
+  print('This is a ${brightRed}brightRed ${reset}text. ');
+  print('This is a ${brightGreen}brightGreen ${reset}text. ');
+  print('This is a ${brightYellow}brightYellow ${reset}text. ');
+  print('This is a ${brightBlue}brightBlue ${reset}text. ');
+  print('This is a ${brightMagenta}brightMagenta ${reset}text. ');
+  print('This is a ${brightCyan}brightCyan ${reset}text. ');
+  print('This is a ${brightWhite}brightWhite ${reset}text. ');
 }

@@ -9,8 +9,8 @@
       "name": "gg_console_colors.dart",
       "type": "dart",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/gg_console_colors.dart",
-      "args": ["--param", "value"],
+      "program": "${workspaceFolder}/example/gg_console_colors_example.dart",
+      "args": [],
       "console": "debugConsole"
     },
     {
