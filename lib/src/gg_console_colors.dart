@@ -8,52 +8,52 @@
 const String _reset = '\x1B[0m';
 
 /// Black console color
-String black(String str) => '\x1B[30m$str$_reset';
+String black(Object str) => '\x1B[30m${str.toString()}$_reset';
 
 /// Red console color
-String red(String str) => '\x1B[31m$str$_reset';
+String red(Object str) => '\x1B[31m${str.toString()}$_reset';
 
 /// Green console color
-String green(String str) => '\x1B[32m$str$_reset';
+String green(Object str) => '\x1B[32m${str.toString()}$_reset';
 
 /// Yellow console color
-String yellow(String str) => '\x1B[33m$str$_reset';
+String yellow(Object str) => '\x1B[33m${str.toString()}$_reset';
 
 /// Blue console color
-String blue(String str) => '\x1B[34m$str$_reset';
+String blue(Object str) => '\x1B[34m${str.toString()}$_reset';
 
 /// Magenta console color
-String magenta(String str) => '\x1B[35m$str$_reset';
+String magenta(Object str) => '\x1B[35m${str.toString()}$_reset';
 
 /// Cyan console color
-String cyan(String str) => '\x1B[36m$str$_reset';
+String cyan(Object str) => '\x1B[36m${str.toString()}$_reset';
 
 /// White console color
-String white(String str) => '\x1B[37m$str$_reset';
+String white(Object str) => '\x1B[37m${str.toString()}$_reset';
 
 /// BrightBlack console color
-String brightBlack(String str) => '\x1B[90m$str$_reset';
+String brightBlack(Object str) => '\x1B[90m${str.toString()}$_reset';
 
 /// BrightRed console color
-String brightRed(String str) => '\x1B[91m$str$_reset';
+String brightRed(Object str) => '\x1B[91m${str.toString()}$_reset';
 
 /// BrightGreen console color
-String brightGreen(String str) => '\x1B[92m$str$_reset';
+String brightGreen(Object str) => '\x1B[92m${str.toString()}$_reset';
 
 /// BrightYellow console color
-String brightYellow(String str) => '\x1B[93m$str$_reset';
+String brightYellow(Object str) => '\x1B[93m${str.toString()}$_reset';
 
 /// BrightBlue console color
-String brightBlue(String str) => '\x1B[94m$str$_reset';
+String brightBlue(Object str) => '\x1B[94m${str.toString()}$_reset';
 
 /// BrightMagenta console color
-String brightMagenta(String str) => '\x1B[95m$str$_reset';
+String brightMagenta(Object str) => '\x1B[95m${str.toString()}$_reset';
 
 /// BrightCyan console color
-String brightCyan(String str) => '\x1B[96m$str$_reset';
+String brightCyan(Object str) => '\x1B[96m${str.toString()}$_reset';
 
 /// BrightWhite console color
-String brightWhite(String str) => '\x1B[97m$str$_reset';
+String brightWhite(Object str) => '\x1B[97m${str.toString()}$_reset';
 
 /// Prints an example of the console colors
 void printExample() {

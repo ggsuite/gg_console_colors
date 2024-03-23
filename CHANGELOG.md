@@ -1,5 +1,9 @@
 # Change Log
 
+## 2.0.1
+
+- Color function takes objects
+
 ## 2.0.0
 
 - Turn color variables into functions
