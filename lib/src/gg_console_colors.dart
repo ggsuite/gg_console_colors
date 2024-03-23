@@ -5,73 +5,72 @@
 // found in the LICENSE file in the root of this package.
 
 /// Reset console color
-const String reset = '\x1B[0m';
+const String _reset = '\x1B[0m';
 
 /// Black console color
-const String black = '\x1B[30m';
+String black(String str) => '\x1B[30m$str$_reset';
 
 /// Red console color
-const String red = '\x1B[31m';
+String red(String str) => '\x1B[31m$str$_reset';
 
 /// Green console color
-const String green = '\x1B[32m';
+String green(String str) => '\x1B[32m$str$_reset';
 
 /// Yellow console color
-const String yellow = '\x1B[33m';
+String yellow(String str) => '\x1B[33m$str$_reset';
 
 /// Blue console color
-const String blue = '\x1B[34m';
+String blue(String str) => '\x1B[34m$str$_reset';
 
 /// Magenta console color
-const String magenta = '\x1B[35m';
+String magenta(String str) => '\x1B[35m$str$_reset';
 
 /// Cyan console color
-const String cyan = '\x1B[36m';
+String cyan(String str) => '\x1B[36m$str$_reset';
 
 /// White console color
-const String white = '\x1B[37m';
+String white(String str) => '\x1B[37m$str$_reset';
 
 /// BrightBlack console color
-const String brightBlack = '\x1B[90m';
+String brightBlack(String str) => '\x1B[90m$str$_reset';
 
 /// BrightRed console color
-const String brightRed = '\x1B[91m';
+String brightRed(String str) => '\x1B[91m$str$_reset';
 
 /// BrightGreen console color
-const String brightGreen = '\x1B[92m';
+String brightGreen(String str) => '\x1B[92m$str$_reset';
 
 /// BrightYellow console color
-const String brightYellow = '\x1B[93m';
+String brightYellow(String str) => '\x1B[93m$str$_reset';
 
 /// BrightBlue console color
-const String brightBlue = '\x1B[94m';
+String brightBlue(String str) => '\x1B[94m$str$_reset';
 
 /// BrightMagenta console color
-const String brightMagenta = '\x1B[95m';
+String brightMagenta(String str) => '\x1B[95m$str$_reset';
 
 /// BrightCyan console color
-const String brightCyan = '\x1B[96m';
+String brightCyan(String str) => '\x1B[96m$str$_reset';
 
 /// BrightWhite console color
-const String brightWhite = '\x1B[97m';
+String brightWhite(String str) => '\x1B[97m$str$_reset';
 
 /// Prints an example of the console colors
 void printExample() {
-  print('This is a ${reset}reset ${reset}text. ');
-  print('This is a ${black}black ${reset}text. ');
-  print('This is a ${red}red ${reset}text. ');
-  print('This is a ${green}green ${reset}text. ');
-  print('This is a ${yellow}yellow ${reset}text. ');
-  print('This is a ${blue}blue ${reset}text. ');
-  print('This is a ${magenta}magenta ${reset}text. ');
-  print('This is a ${cyan}cyan ${reset}text. ');
-  print('This is a ${white}white ${reset}text. ');
-  print('This is a ${brightBlack}brightBlack ${reset}text. ');
-  print('This is a ${brightRed}brightRed ${reset}text. ');
-  print('This is a ${brightGreen}brightGreen ${reset}text. ');
-  print('This is a ${brightYellow}brightYellow ${reset}text. ');
-  print('This is a ${brightBlue}brightBlue ${reset}text. ');
-  print('This is a ${brightMagenta}brightMagenta ${reset}text. ');
-  print('This is a ${brightCyan}brightCyan ${reset}text. ');
-  print('This is a ${brightWhite}brightWhite ${reset}text. ');
+  print(black('This is a black text. '));
+  print(red('This is a red text. '));
+  print(green('This is a green text. '));
+  print(yellow('This is a yellow text. '));
+  print(blue('This is a blue text. '));
+  print(magenta('This is a magenta text'));
+  print(cyan('This is a cyan text. '));
+  print(white('This is a white text. '));
+  print(brightBlack('This is a brightBlack text. '));
+  print(brightRed('This is a brightRed text. '));
+  print(brightGreen('This is a brightGreen text. '));
+  print(brightYellow('This is a brightYellow text. '));
+  print(brightBlue('This is a brightBlue text. '));
+  print(brightMagenta('This is a brightMagenta text'));
+  print(brightCyan('This is a brightCyan text. '));
+  print(brightWhite('This is a brightWhite text. '));
 }
