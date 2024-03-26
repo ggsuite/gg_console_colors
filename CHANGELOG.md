@@ -1,5 +1,9 @@
 # Change Log
 
+## 2.0.2
+
+- Add darkGray
+
 ## 2.0.1
 
 - Color function takes objects

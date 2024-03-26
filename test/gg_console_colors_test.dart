@@ -28,6 +28,7 @@ void main() {
               cyan('This is a cyan text. '),
               white('This is a white text. '),
               brightBlack('This is a brightBlack text. '),
+              darkGray('This is a darkGray text. '),
               brightRed('This is a brightRed text. '),
               brightGreen('This is a brightGreen text. '),
               brightYellow('This is a brightYellow text. '),

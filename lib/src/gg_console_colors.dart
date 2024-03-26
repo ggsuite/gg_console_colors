@@ -34,6 +34,9 @@ String white(Object str) => '\x1B[37m${str.toString()}$_reset';
 /// BrightBlack console color
 String brightBlack(Object str) => '\x1B[90m${str.toString()}$_reset';
 
+/// BrightBlack console color
+String darkGray(Object str) => brightBlack(str);
+
 /// BrightRed console color
 String brightRed(Object str) => '\x1B[91m${str.toString()}$_reset';
 
@@ -66,6 +69,7 @@ void printExample() {
   print(cyan('This is a cyan text. '));
   print(white('This is a white text. '));
   print(brightBlack('This is a brightBlack text. '));
+  print(darkGray('This is a darkGray text. '));
   print(brightRed('This is a brightRed text. '));
   print(brightGreen('This is a brightGreen text. '));
   print(brightYellow('This is a brightYellow text. '));
