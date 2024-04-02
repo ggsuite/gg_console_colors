@@ -15,7 +15,7 @@ void main() {
       test('should print a list of example colors', () async {
         final messages = <String>[];
         capturePrint(
-          log: messages.add,
+          ggLog: messages.add,
           code: () {
             printExample();
             expect(messages, [
