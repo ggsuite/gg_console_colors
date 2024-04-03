@@ -1,5 +1,9 @@
 # Change Log
 
+## 2.1.0
+
+- Wrap colors like this `green('This is a green text with a ${yellow('yellow')} word. ')`
+
 ## 2.0.3
 
 - Update dependencies

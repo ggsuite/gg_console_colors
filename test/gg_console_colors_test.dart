@@ -36,8 +36,19 @@ void main() {
               brightMagenta('This is a brightMagenta text'),
               brightCyan('This is a brightCyan text. '),
               brightWhite('This is a brightWhite text. '),
+              green('This is a green text with a ${yellow('yellow')} word. '),
             ]);
           },
+        );
+      });
+
+      test('should reset colors to the outer one', () async {
+        const b = '\x1B[34m';
+        const g = '\x1B[32m';
+        const r = '\x1B[0m';
+        expect(
+          green('This is green text with a ${blue('blue')} word.'),
+          '${g}This is green text with a ${b}blue$g word.$r',
         );
       });
     });
