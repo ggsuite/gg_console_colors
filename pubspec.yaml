@@ -1,6 +1,6 @@
 name: gg_console_colors
 description: A Dart package providing a collection of console colors to easily colorize command line outputs.
-version: 2.1.1
+version: 2.1.2
 repository: https://github.com/inlavigo/gg_console_colors.git
 
 environment:
