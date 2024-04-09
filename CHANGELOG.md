@@ -1,6 +1,10 @@
 # Changelog
 
-## [Unreleased]
+## [2.1.1] - 2024-04-09
+
+### Added
+
+- Prepare release
 
 ### Changed
 
@@ -32,4 +36,4 @@
 
 - Initial version.
 
-[Unreleased]: https://github.com/inlavigo/gg_console_colors/compare/2.1.0...HEAD
+[2.1.1]: https://github.com/inlavigo/gg_console_colors/compare/2.1.0...2.1.1
