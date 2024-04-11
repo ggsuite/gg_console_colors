@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.1.3] - 2024-04-11
+
+### Removed
+
+- dependencies args, colorize, gg\_args and gg\_process
+
 ## [2.1.2] - 2024-04-09
 
 ### Removed
@@ -42,5 +48,6 @@
 
 - Initial version.
 
+[2.1.3]: https://github.com/inlavigo/gg_console_colors/compare/2.1.2...2.1.3
 [2.1.2]: https://github.com/inlavigo/gg_console_colors/compare/2.1.1...2.1.2
 [2.1.1]: https://github.com/inlavigo/gg_console_colors/compare/2.1.0...2.1.1

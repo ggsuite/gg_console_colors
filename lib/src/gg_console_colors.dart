@@ -98,7 +98,7 @@ String brightWhite(Object str) => _colorize(str, _brightWhite);
 String darkGray(Object str) => _colorize(str, _brightBlack);
 
 /// Prints an example of the console colors
-void printExample() {
+void printExample({void Function(String) print = print}) {
   print(black('This is a black text. '));
   print(red('This is a red text. '));
   print(green('This is a green text. '));
