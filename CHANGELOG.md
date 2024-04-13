@@ -1,10 +1,11 @@
 # Changelog
 
-## [Unreleased]
+## [2.1.4] - 2024-04-13
 
 ### Removed
 
 - dependency to gg\_install\_gg, remove ./check script
+- dependency pana
 
 ## [2.1.3] - 2024-04-11
 
@@ -54,7 +55,7 @@
 
 - Initial version.
 
-[Unreleased]: https://github.com/inlavigo/gg_console_colors/compare/2.1.3...HEAD
+[2.1.4]: https://github.com/inlavigo/gg_console_colors/compare/2.1.3...2.1.4
 [2.1.3]: https://github.com/inlavigo/gg_console_colors/compare/2.1.2...2.1.3
 [2.1.2]: https://github.com/inlavigo/gg_console_colors/compare/2.1.1...2.1.2
 [2.1.1]: https://github.com/inlavigo/gg_console_colors/compare/2.1.0...2.1.1
