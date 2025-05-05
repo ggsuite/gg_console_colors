@@ -11,6 +11,7 @@ const _black = '\x1B[30m';
 
 String _colorize(Object str, String color) {
   return '$color${str.toString()}$_reset'
+      // Re-apply color after every explicit reset that is not the final one.
       .replaceAll(RegExp(r'\x1B\[0m(?=.)'), color);
 }
 
@@ -96,6 +97,13 @@ String brightWhite(Object str) => _colorize(str, _brightWhite);
 
 /// BrightBlack console color
 String darkGray(Object str) => _colorize(str, _brightBlack);
+
+/// Removes all ANSI escape sequences that set console colors from [str].
+String rmConsoleColors(Object str) {
+  final ansiColorExpr = RegExp(r'\x1B\[[0-9;]*m');
+
+  return str.toString().replaceAll(ansiColorExpr, '');
+}
 
 /// Prints an example of the console colors
 void printExample({void Function(String) print = print}) {

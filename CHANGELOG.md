@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- Add rmConsoleColors
+
 ## [2.1.4] - 2024-04-13
 
 ### Removed
@@ -55,6 +61,7 @@
 
 - Initial version.
 
+[Unreleased]: https://github.com/inlavigo/gg_console_colors/compare/2.1.4...HEAD
 [2.1.4]: https://github.com/inlavigo/gg_console_colors/compare/2.1.3...2.1.4
 [2.1.3]: https://github.com/inlavigo/gg_console_colors/compare/2.1.2...2.1.3
 [2.1.2]: https://github.com/inlavigo/gg_console_colors/compare/2.1.1...2.1.2

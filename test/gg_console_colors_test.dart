@@ -9,7 +9,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('GgConsoleColors()', () {
-    // #########################################################################
+    // #####################################################################
     group('printExample()', () {
       test('should print a list of example colors', () async {
         final messages = <String>[];
@@ -45,6 +45,29 @@ void main() {
           green('This is green text with a ${blue('blue')} word.'),
           '${g}This is green text with a ${b}blue$g word.$r',
         );
+      });
+    });
+
+    // #####################################################################
+    group('rmConsoleColors()', () {
+      test('should remove ANSI color sequences from simple colored string', () {
+        final colored = red('Error');
+        expect(colored.startsWith('\x1B['), isTrue);
+        expect(rmConsoleColors(colored), 'Error');
+      });
+
+      test('should remove colors from nested colored string', () {
+        final colored = green('This is green text with a '
+            '${yellow('yellow')} word.');
+        expect(
+          rmConsoleColors(colored),
+          'This is green text with a yellow word.',
+        );
+      });
+
+      test('should leave a plain string untouched', () {
+        const plain = 'Just a normal string';
+        expect(rmConsoleColors(plain), plain);
       });
     });
   });
