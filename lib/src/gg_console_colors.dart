@@ -11,13 +11,15 @@ const _black = '\x1B[30m';
 
 String _colorize(Object str, String color) {
   return '$color${str.toString()}$_reset'
-      // Re-apply color after every explicit reset that is not the final one.
-      .replaceAll(RegExp(r'\x1B\[0m(?=.)'), color);
+  // Re-apply color after every explicit reset that is not the final one.
+  .replaceAll(RegExp(r'\x1B\[0m(?=.)'), color);
 }
 
 /// Black console color
-String black(Object str) => '$_black${str.toString()}$_reset'
-    .replaceAll(RegExp(r'\x1B\[0m(?=.)'), _black);
+String black(Object str) => '$_black${str.toString()}$_reset'.replaceAll(
+  RegExp(r'\x1B\[0m(?=.)'),
+  _black,
+);
 
 const _red = '\x1B[31m';
 

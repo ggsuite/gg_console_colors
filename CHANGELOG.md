@@ -1,10 +1,14 @@
 # Changelog
 
-## [Unreleased]
+## [2.1.5] - 2025-06-07
 
 ### Added
 
 - Add rmConsoleColors
+
+### Changed
+
+- Update to dart 3.8.0
 
 ## [2.1.4] - 2024-04-13
 
@@ -61,7 +65,7 @@
 
 - Initial version.
 
-[Unreleased]: https://github.com/inlavigo/gg_console_colors/compare/2.1.4...HEAD
+[2.1.5]: https://github.com/inlavigo/gg_console_colors/compare/2.1.4...2.1.5
 [2.1.4]: https://github.com/inlavigo/gg_console_colors/compare/2.1.3...2.1.4
 [2.1.3]: https://github.com/inlavigo/gg_console_colors/compare/2.1.2...2.1.3
 [2.1.2]: https://github.com/inlavigo/gg_console_colors/compare/2.1.1...2.1.2

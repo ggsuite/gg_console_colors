@@ -57,8 +57,10 @@ void main() {
       });
 
       test('should remove colors from nested colored string', () {
-        final colored = green('This is green text with a '
-            '${yellow('yellow')} word.');
+        final colored = green(
+          'This is green text with a '
+          '${yellow('yellow')} word.',
+        );
         expect(
           rmConsoleColors(colored),
           'This is green text with a yellow word.',
