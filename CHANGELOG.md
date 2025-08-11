@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- Add .gitattributes file
+
 ## [2.1.5] - 2025-06-07
 
 ### Added
@@ -65,6 +71,7 @@
 
 - Initial version.
 
+[Unreleased]: https://github.com/inlavigo/gg_console_colors/compare/2.1.5...HEAD
 [2.1.5]: https://github.com/inlavigo/gg_console_colors/compare/2.1.4...2.1.5
 [2.1.4]: https://github.com/inlavigo/gg_console_colors/compare/2.1.3...2.1.4
 [2.1.3]: https://github.com/inlavigo/gg_console_colors/compare/2.1.2...2.1.3
