@@ -5,6 +5,10 @@
 ### Added
 
 - Add .gitattributes file
+- Add semantic colors: cAction, cError, cWarn, cCmd, cPath, cDetail, cH1, cH2,
+  cSuccess
+- Add `ggColorsEnabled` and `colorsDisabledByEnvironment()` to suppress colors
+  when `NO_COLOR` is set or `TERM` is `dumb`
 
 ## [2.1.5] - 2025-06-07
 

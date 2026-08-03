@@ -7,3 +7,4 @@
 library;
 
 export 'src/gg_console_colors.dart';
+export 'src/gg_semantic_colors.dart';

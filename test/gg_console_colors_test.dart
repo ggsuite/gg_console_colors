@@ -49,6 +49,54 @@ void main() {
     });
 
     // #####################################################################
+    group('ggColorsEnabled', () {
+      tearDown(() => ggColorsEnabled = null);
+
+      test('should be true by default', () {
+        expect(ggColorsEnabled, isTrue);
+      });
+
+      test('should return uncolored strings when set to false', () {
+        ggColorsEnabled = false;
+        expect(red('Error'), 'Error');
+        expect(green('a ${yellow('b')} c'), 'a b c');
+      });
+
+      test('should return colored strings again when set to true', () {
+        ggColorsEnabled = false;
+        ggColorsEnabled = true;
+        expect(red('Error'), '\x1B[31mError\x1B[0m');
+      });
+
+      test('should restore the default when set to null', () {
+        ggColorsEnabled = false;
+        ggColorsEnabled = null;
+        expect(ggColorsEnabled, isTrue);
+      });
+    });
+
+    // #####################################################################
+    group('colorsDisabledByEnvironment()', () {
+      test('should be true when NO_COLOR is set', () {
+        expect(colorsDisabledByEnvironment({'NO_COLOR': ''}), isTrue);
+        expect(colorsDisabledByEnvironment({'NO_COLOR': '1'}), isTrue);
+      });
+
+      test('should be true when TERM is dumb', () {
+        expect(colorsDisabledByEnvironment({'TERM': 'dumb'}), isTrue);
+      });
+
+      test('should be false otherwise', () {
+        expect(colorsDisabledByEnvironment({'TERM': 'xterm'}), isFalse);
+        expect(colorsDisabledByEnvironment({}), isFalse);
+      });
+
+      test('should use the process environment by default', () {
+        expect(colorsDisabledByEnvironment(), isA<bool>());
+      });
+    });
+
+    // #####################################################################
     group('rmConsoleColors()', () {
       test('should remove ANSI color sequences from simple colored string', () {
         final colored = red('Error');
