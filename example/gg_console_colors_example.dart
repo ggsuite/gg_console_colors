@@ -9,4 +9,5 @@ import 'package:gg_console_colors/gg_console_colors.dart';
 
 Future<void> main() async {
   printExample();
+  printSemanticExample();
 }

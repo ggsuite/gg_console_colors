@@ -4,28 +4,48 @@
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
 
+import 'dart:io';
+
 /// Reset console color
 const String _reset = '\x1B[0m';
 
-const _black = '\x1B[30m';
+/// Returns true when the environment asks for uncolored output, i.e. when
+/// `NO_COLOR` is set (see https://no-color.org) or `TERM` is `dumb`.
+bool colorsDisabledByEnvironment([Map<String, String>? environment]) {
+  final env = environment ?? Platform.environment;
+  return env.containsKey('NO_COLOR') || env['TERM'] == 'dumb';
+}
+
+bool? _ggColorsEnabled;
+
+/// True when the color functions emit ANSI escape sequences.
+///
+/// Defaults to [colorsDisabledByEnvironment] being false. Set it to gate
+/// colors on something else, e.g. `ggColorsEnabled = stdout.hasTerminal;`.
+/// Assign null to restore the default.
+bool get ggColorsEnabled => _ggColorsEnabled ?? !colorsDisabledByEnvironment();
+
+set ggColorsEnabled(bool? value) => _ggColorsEnabled = value;
 
 String _colorize(Object str, String color) {
+  if (!ggColorsEnabled) {
+    return str.toString();
+  }
+
   return '$color${str.toString()}$_reset'
   // Re-apply color after every explicit reset that is not the final one.
   .replaceAll(RegExp(r'\x1B\[0m(?=.)'), color);
 }
 
+const _black = '\x1B[30m';
+
 /// Black console color
-String black(Object str) => '$_black${str.toString()}$_reset'.replaceAll(
-  RegExp(r'\x1B\[0m(?=.)'),
-  _black,
-);
+String black(Object str) => _colorize(str, _black);
 
 const _red = '\x1B[31m';
 
 /// Red console color
-String red(Object str) =>
-    '$_red${str.toString()}$_reset'.replaceAll(RegExp(r'\x1B\[0m(?=.)'), _red);
+String red(Object str) => _colorize(str, _red);
 
 const _green = '\x1B[32m';
 
@@ -106,6 +126,9 @@ String rmConsoleColors(Object str) {
 
   return str.toString().replaceAll(ansiColorExpr, '');
 }
+
+/// Removes all ANSI escape sequences that set console colors from [str].
+const rmC = rmConsoleColors;
 
 /// Prints an example of the console colors
 void printExample({void Function(String) print = print}) {
