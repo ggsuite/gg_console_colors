@@ -1,16 +1,16 @@
 # Changelog
 
-## [Unreleased]
+## 2.2.0 - 2026-08-03
 
 ### Added
 
 - Add .gitattributes file
 - Add semantic colors: cAction, cError, cWarn, cCmd, cPath, cDetail, cH1, cH2,
-  cSuccess
+cSuccess
 - Add `ggColorsEnabled` and `colorsDisabledByEnvironment()` to suppress colors
-  when `NO_COLOR` is set or `TERM` is `dumb`
+when `NO_COLOR` is set or `TERM` is `dumb`
 
-## [2.1.5] - 2025-06-07
+## 2.1.5 - 2025-06-07
 
 ### Added
 
@@ -20,26 +20,26 @@
 
 - Update to dart 3.8.0
 
-## [2.1.4] - 2024-04-13
+## 2.1.4 - 2024-04-13
 
 ### Removed
 
-- dependency to gg\_install\_gg, remove ./check script
+- dependency to gg_install_gg, remove ./check script
 - dependency pana
 
-## [2.1.3] - 2024-04-11
+## 2.1.3 - 2024-04-11
 
 ### Removed
 
-- dependencies args, colorize, gg\_args and gg\_process
+- dependencies args, colorize, gg_args and gg_process
 
-## [2.1.2] - 2024-04-09
+## 2.1.2 - 2024-04-09
 
 ### Removed
 
 - 'Pipline: Disable cache'
 
-## [2.1.1] - 2024-04-09
+## 2.1.1 - 2024-04-09
 
 ### Added
 
@@ -74,10 +74,3 @@
 ## 1.0.0 - 2024-01-01
 
 - Initial version.
-
-[Unreleased]: https://github.com/inlavigo/gg_console_colors/compare/2.1.5...HEAD
-[2.1.5]: https://github.com/inlavigo/gg_console_colors/compare/2.1.4...2.1.5
-[2.1.4]: https://github.com/inlavigo/gg_console_colors/compare/2.1.3...2.1.4
-[2.1.3]: https://github.com/inlavigo/gg_console_colors/compare/2.1.2...2.1.3
-[2.1.2]: https://github.com/inlavigo/gg_console_colors/compare/2.1.1...2.1.2
-[2.1.1]: https://github.com/inlavigo/gg_console_colors/compare/2.1.0...2.1.1
