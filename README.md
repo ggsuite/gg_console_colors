@@ -16,7 +16,7 @@ command line tools consistent:
 | `cPath()`        | blue     |
 | `cDetail()`      | darkGray |
 | `cH1()`          | cyan     |
-| `cH2()`          | white    |
+| `cH2()`          | bold     |
 | `cSuccess()`     | green    |
 
 ## Disabling colors

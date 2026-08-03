@@ -37,6 +37,11 @@ String _colorize(Object str, String color) {
   .replaceAll(RegExp(r'\x1B\[0m(?=.)'), color);
 }
 
+const _bold = '\x1B[1m';
+
+/// Bold console text. Readable on dark and bright terminals.
+String bold(Object str) => _colorize(str, _bold);
+
 const _black = '\x1B[30m';
 
 /// Black console color
@@ -132,6 +137,7 @@ const rmC = rmConsoleColors;
 
 /// Prints an example of the console colors
 void printExample({void Function(String) print = print}) {
+  print(bold('This is a bold text. '));
   print(black('This is a black text. '));
   print(red('This is a red text. '));
   print(green('This is a green text. '));

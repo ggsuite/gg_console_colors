@@ -39,7 +39,7 @@ void main() {
         expect(cPath('a'), blue('a'));
         expect(cDetail('a'), darkGray('a'));
         expect(cH1('a'), cyan('a'));
-        expect(cH2('a'), white('a'));
+        expect(cH2('a'), bold('a'));
         expect(cSuccess('a'), green('a'));
       });
     });

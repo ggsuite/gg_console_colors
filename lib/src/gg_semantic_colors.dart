@@ -28,7 +28,7 @@ String cDetail(Object str) => darkGray(str);
 String cH1(Object str) => cyan(str);
 
 /// Colorizes a second level heading
-String cH2(Object str) => white(str);
+String cH2(Object str) => bold(str);
 
 /// Colorizes a success message
 String cSuccess(Object str) => green(str);
