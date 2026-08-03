@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.0 - 2026-08-03
+
+### Changed
+
+- Improve gg_console_colors
+
 ## 2.2.0 - 2026-08-03
 
 ### Added
@@ -7,6 +13,8 @@
 - Add .gitattributes file
 - Add semantic colors: cAction, cError, cWarn, cCmd, cPath, cDetail, cH1, cH2,
 cSuccess
+- Add `bold()` console style, used by `cH2()` so headings stay readable on
+dark and bright terminals
 - Add `ggColorsEnabled` and `colorsDisabledByEnvironment()` to suppress colors
 when `NO_COLOR` is set or `TERM` is `dumb`
 

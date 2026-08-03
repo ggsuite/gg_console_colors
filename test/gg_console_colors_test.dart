@@ -16,6 +16,7 @@ void main() {
 
         printExample(print: messages.add);
         expect(messages, [
+          bold('This is a bold text. '),
           black('This is a black text. '),
           red('This is a red text. '),
           green('This is a green text. '),
