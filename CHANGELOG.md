@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Provide gg via npm
+
 ## 2.3.0 - 2026-08-03
 
 ### Changed
