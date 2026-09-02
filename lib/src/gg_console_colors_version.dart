@@ -9,4 +9,4 @@
 // coverage:ignore-file
 
 /// The version of the `gg_console_colors` package.
-const String ggConsoleColorsVersion = '2.4.0';
+const String ggConsoleColorsVersion = '2.5.0';
